@@ -62,9 +62,10 @@ if card_total < 21
   until card_total >= 21
     card_total = hit?(card_total)
     card_total
+    puts "Sorry, you hit #{card_total}. Thanks for playing!"
   end
 else
-  puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  
 end
 end
     
