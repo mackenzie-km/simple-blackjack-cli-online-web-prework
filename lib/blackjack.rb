@@ -58,12 +58,12 @@ def runner
 welcome
 card_total = 0
 card_total = initial_round 
-binding.pry
 if card_total < 21
 until card_total >= 21
     card_total = hit?(card_total)
     return card_total
 end
+binding.pry
 else
 end_game(card_total)
 end
