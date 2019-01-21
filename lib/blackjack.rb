@@ -22,8 +22,10 @@ def get_user_input
   return user_input
 end
 
+require "pry"
 def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
+  binding.pry
 end
 
 def initial_round
@@ -53,7 +55,6 @@ def invalid_command
   puts "Please enter a valid command."
 end
 
-require "pry"
 def runner
 welcome
 card_total = 0
@@ -66,6 +67,5 @@ if card_total < 21
 else
   end_game(card_total)
 end
-binding.pry
 end
     
