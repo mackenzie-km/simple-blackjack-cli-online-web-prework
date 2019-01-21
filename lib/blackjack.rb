@@ -22,10 +22,8 @@ def get_user_input
   return user_input
 end
 
-require "pry"
 def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
-  binding.pry
 end
 
 def initial_round
