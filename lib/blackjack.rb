@@ -25,21 +25,21 @@ def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
+require "pry"
 def initial_round
   card_total = 0
 card_total = deal_card + deal_card
 display_card_total(card_total)
+binding.pry
 return card_total
 end
 
-require "pry"
 def hit?(current_card_total)
   prompt_user
   user_input = get_user_input 
 if user_input == 'h'
     card_total = current_card_total + deal_card
     display_card_total(card_total)
-    binding.pry
     return card_total
 elsif user_input == 's'
   card_total = current_card_total
