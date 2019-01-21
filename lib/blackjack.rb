@@ -53,7 +53,7 @@ def invalid_command
   puts "Please enter a valid command."
 end
 
-require "pry"
+
 def runner
 welcome
 card_total = 0
@@ -66,6 +66,5 @@ if card_total < 21
 else
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
-binding.pry
 end
     
