@@ -56,6 +56,7 @@ end
 require "pry"
 def runner
 welcome
+card_total = 0
 card_total = initial_round 
  binding.pry
 until card_total >= 21
