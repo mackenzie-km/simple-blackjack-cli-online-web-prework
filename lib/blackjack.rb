@@ -36,11 +36,11 @@ require "pry"
 def hit?(current_card_total)
   prompt_user
   user_input = get_user_input 
+if user_input == 'h'
     card_total = current_card_total + deal_card
     display_card_total(card_total)
     binding.pry
     return card_total
-if user_input == 'h'
 elsif user_input == 's'
   card_total = current_card_total
 else
