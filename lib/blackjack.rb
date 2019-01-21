@@ -64,7 +64,7 @@ if card_total < 21
     card_total
   end
 else
-  end_game(card_total)
+  puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 binding.pry
 end
