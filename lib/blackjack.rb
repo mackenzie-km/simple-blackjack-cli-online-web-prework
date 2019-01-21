@@ -53,6 +53,7 @@ def invalid_command
   puts "Please enter a valid command."
 end
 
+require "pry"
 def runner
 welcome
 card_total = 0
@@ -65,5 +66,6 @@ if card_total < 21
 else
   end_game(card_total)
 end
+binding.pry
 end
     
