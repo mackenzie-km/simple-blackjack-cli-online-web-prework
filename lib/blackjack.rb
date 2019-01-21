@@ -66,6 +66,6 @@ if card_total < 21
 else
   end_game(card_total)
 end
-binding.pry
+
 end
     
