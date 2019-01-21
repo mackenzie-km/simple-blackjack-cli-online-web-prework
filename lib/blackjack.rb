@@ -5,7 +5,6 @@ end
 
 def deal_card
   card_total = rand(1..11)
-    binding.pry
   return card_total
 end
 
@@ -34,11 +33,13 @@ display_card_total(card_total)
 return card_total
 end
 
+require "pry"
 def hit?(current_card_total)
   prompt_user
   user_input = get_user_input 
 if user_input == 'h'
     card_total = current_card_total + deal_card
+    binding.pry
     display_card_total(card_total)
     return card_total
 elsif user_input == 's'
