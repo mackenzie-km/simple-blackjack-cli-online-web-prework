@@ -64,9 +64,8 @@ if card_total < 21
     card_total
   end
 else
-  binding.pry
   end_game(card_total)
 end
-
+binding.pry
 end
     
