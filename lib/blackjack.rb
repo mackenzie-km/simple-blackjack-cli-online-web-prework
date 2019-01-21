@@ -2,9 +2,10 @@ def welcome
  puts "Welcome to the Blackjack Table"
 end
 
+
 def deal_card
-  $card_total = rand(1..11)
-  return $card_total
+  card_total = rand(1..11)
+  return card_total
 end
 
 def display_card_total(card_total)
@@ -22,14 +23,18 @@ def get_user_input
 end
 
 def end_game(card_total)
+  if card_total > 21
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
+end
 end
 
 def initial_round
+  card_total = 0
 card_total = deal_card + deal_card
 display_card_total(card_total)
 return card_total
 end
+
 
 def hit?(current_card_total)
   prompt_user
@@ -53,11 +58,12 @@ end
 
 def runner
 welcome
+card_total = 0
 card_total = initial_round 
-until card_total >= 21
-    hit?(card_total)
-    return card_total
-end
-end_game(card_total)
+  until card_total >= 21
+    card_total = hit?(card_total)
+    card_total
+  end_game(card_total)
+  end
 end
     
