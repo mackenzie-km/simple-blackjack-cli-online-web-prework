@@ -62,10 +62,10 @@ if card_total < 21
   until card_total >= 21
     card_total = hit?(card_total)
     return card_total
-end
-binding.pry
+  end
 else
   end_game(card_total)
+  binding.pry
 end
 end
     
