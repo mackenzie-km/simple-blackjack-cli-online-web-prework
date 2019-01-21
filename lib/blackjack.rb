@@ -33,13 +33,12 @@ display_card_total(card_total)
 return card_total
 end
 
-require "pry"
+
 def hit?(current_card_total)
   prompt_user
   user_input = get_user_input 
 if user_input == 'h'
     card_total = current_card_total + deal_card
-    binding.pry
     display_card_total(card_total)
     return card_total
 elsif user_input == 's'
@@ -54,10 +53,11 @@ def invalid_command
   puts "Please enter a valid command."
 end
 
-
+require "pry"
 def runner
 welcome
 card_total = initial_round 
+ binding.pry
 until card_total >= 21
     card_total = hit?(card_total)
     return card_total
