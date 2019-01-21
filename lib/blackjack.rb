@@ -4,9 +4,9 @@ end
 
 require "pry"
 def deal_card
-  $card_total = rand(1..11)
+  card_total = rand(1..11)
   binding.pry
-  return $card_total
+  return card_total
 end
 
 def display_card_total(card_total)
