@@ -2,8 +2,10 @@ def welcome
  puts "Welcome to the Blackjack Table"
 end
 
+require "pry"
 def deal_card
   $card_total = rand(1..11)
+  binding.pry
   return $card_total
 end
 
@@ -25,12 +27,10 @@ def end_game(card_total)
   puts "Sorry, you hit #{card_total}. Thanks for playing!"
 end
 
-require "pry"
 def initial_round
   card_total = 0
 card_total = deal_card + deal_card
 display_card_total(card_total)
-binding.pry
 return card_total
 end
 
